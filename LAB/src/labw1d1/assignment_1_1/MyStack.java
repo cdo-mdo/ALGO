@@ -1,5 +1,7 @@
 package labw1d1.assignment_1_1;
 
+// https://leetcode.com/problems/implement-stack-using-queues/description/
+
 import java.util.LinkedList;
 import java.util.Queue;
 
