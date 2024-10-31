@@ -17,7 +17,12 @@ class Solution {
             }
             list.remove(Character.valueOf(t.charAt(i)));
         }
-        return true;
+        if (list.isEmpty()) {
+        	return true;
+        }
+        else {
+        	return false;
+        }
     }
     
     public static void main(String[] args) {
