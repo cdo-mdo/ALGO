@@ -6,14 +6,14 @@ public class Heap {
 	
 	public Heap(int size) {
 		this.size = size;
-		array = new int[size];
+		array = new int[size + 1];
+		array[0] = 0;
 	}
 	
 	public int buildHeapTopdown() {
 		int count = 0;
-		for (int i = 0; i < size; i++) {
+		for (int i = 1; i <= size; i++) {
 			int val = (int)(Math.random()*100);
-			System.out.println("add " + val + " to position " + i);
 			array[i] = val;
 			count += upHeap(array, i);
 		}
@@ -24,16 +24,18 @@ public class Heap {
 	private int upHeap(int[] array, int num) {
 		int count = 0;
 		int i = num;
-		while (i > 0) {
-			if (array[i / 2] < array[i]) {
+		while (i > 1) {
+			count++;
+			if (array[i] > array[i / 2]) {
 				int temp = array[i];
 				array[i] = array[i / 2];
 				array[i / 2] = temp;
 			}
-			count++;
+			else {
+				break;
+			}
 			i = i / 2;
 		}
-		System.out.println("num = " + num + " count = " + count);
 		return count;
 	}
 	

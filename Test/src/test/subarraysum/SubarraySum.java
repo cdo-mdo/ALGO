@@ -15,7 +15,7 @@ public class SubarraySum {
 		
 		Set<Integer> sets = new HashSet<>();
 		sets.add(k);
-		for (int i = 0; i < nums.length - 1; i++) {
+		for (int i = 0; i < nums.length - 2; i++) {
 			sets.add(sums[i] + k);
 		}
 		System.out.println("sets = " + sets.toString());
@@ -35,9 +35,9 @@ public class SubarraySum {
 	
 	public static void main(String[] args) {
 		SubarraySum solution = new SubarraySum();
-//		System.out.println(solution.subarraySum(new int[] {1, 1, 1}, 2));
-//		System.out.println(solution.subarraySum(new int[] {1, 2, 3}, 3));
-		System.out.println(solution.subarraySum(new int[] {-1, -1, 1}, 0));
+		System.out.println(solution.subarraySum(new int[] {1, 1, 1}, 2));
+		System.out.println(solution.subarraySum(new int[] {1, 2, 3}, 3));
+//		System.out.println(solution.subarraySum(new int[] {-1, -1, 1}, 0));
 		
 	}
 }
