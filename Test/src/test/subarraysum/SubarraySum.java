@@ -1,7 +1,7 @@
 package test.subarraysum;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.HashMap;
+import java.util.Map;
 
 public class SubarraySum {
 	public int subarraySum(int[] nums, int k) {
@@ -10,34 +10,34 @@ public class SubarraySum {
 		for (int i = 0; i < nums.length; i++) {
 			sum += nums[i];
 			sums[i] = sum;
-			System.out.println("DEBUG-0 " + "sums[" + i + "] = " + sum);
 		}
 		
-		Set<Integer> sets = new HashSet<>();
-		sets.add(k);
-		for (int i = 0; i < nums.length - 2; i++) {
-			sets.add(sums[i] + k);
-		}
-		System.out.println("sets = " + sets.toString());
-		
+		Map<Integer, Integer> matches = new HashMap<>();
 		int count = 0;
-		if (sums[0] == k) {
-			count++;
-		}
-			
-		for (int i = 1; i < nums.length; i++) {
-			if (sets.contains(sums[i])) {
-				count++;
+		matches.put(0, 1);
+		for (int i = 0; i < nums.length; i++) {
+			if (matches.containsKey(sums[i] - k)) {
+				count += matches.get(sums[i] - k);
+			}
+			if (matches.containsKey(sums[i])) {
+				matches.put(sums[i], matches.get(sums[i]).intValue() + 1);
+			}
+			else {
+				matches.put(sums[i], 1);
 			}
 		}
+		
 		return count;
 	}
 	
 	public static void main(String[] args) {
 		SubarraySum solution = new SubarraySum();
-		System.out.println(solution.subarraySum(new int[] {1, 1, 1}, 2));
-		System.out.println(solution.subarraySum(new int[] {1, 2, 3}, 3));
+//		System.out.println(solution.subarraySum(new int[] {1, 1, 1}, 2));
+//		System.out.println(solution.subarraySum(new int[] {1, 2, 3}, 3));
 //		System.out.println(solution.subarraySum(new int[] {-1, -1, 1}, 0));
+//		System.out.println(solution.subarraySum(new int[] {1, 2, 1, 2, 1, 2}, 3));
+		System.out.println(solution.subarraySum(new int[] {1, -1, 0}, 0));
+		
 		
 	}
 }
