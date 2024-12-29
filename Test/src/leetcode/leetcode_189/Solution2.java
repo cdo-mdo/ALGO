@@ -1,4 +1,4 @@
-package test.leetcode_189;
+package leetcode.leetcode_189;
 
 public class Solution2 {
     public void rotate(int[] nums, int k) {

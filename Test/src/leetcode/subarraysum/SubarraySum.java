@@ -1,4 +1,4 @@
-package test.subarraysum;
+package leetcode.subarraysum;
 
 import java.util.HashMap;
 import java.util.Map;

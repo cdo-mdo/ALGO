@@ -1,4 +1,4 @@
-package test.twoadjacent;
+package leetcode.twoadjacent;
 
 public class TwoAdjacent {
 	public static boolean hasIncreasingSubarrays(int[] nums, int k) {

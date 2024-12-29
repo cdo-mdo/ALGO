@@ -1,4 +1,4 @@
-package test.leetcode3355;
+package leetcode.leetcode3355;
 
 public class Solution {
 	public boolean isZeroArray(int[] nums, int[][] queries) {

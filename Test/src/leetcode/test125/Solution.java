@@ -1,4 +1,4 @@
-package test.test125;
+package leetcode.test125;
 /**
  * Solution Valid Palindrome
  */

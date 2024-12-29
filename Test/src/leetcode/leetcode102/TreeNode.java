@@ -1,4 +1,4 @@
-package test.leetcode102;
+package leetcode.leetcode102;
 
 // Definition for a binary tree node.
 public class TreeNode {

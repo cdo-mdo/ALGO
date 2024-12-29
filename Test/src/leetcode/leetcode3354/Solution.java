@@ -1,4 +1,4 @@
-package test.leetcode3354;
+package leetcode.leetcode3354;
 
 public class Solution {
 	public int countValidSelections(int[] nums) {

@@ -1,4 +1,4 @@
-package test.leetcode704;
+package leetcode.leetcode704;
 
 public class Solution {
     public int search(int[] nums, int target) {

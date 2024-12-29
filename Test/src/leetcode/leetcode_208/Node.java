@@ -1,4 +1,4 @@
-package test.leetcode_208;
+package leetcode.leetcode_208;
 
 public class Node {
     public static int NUM_CHAR = 'z' - 'a' + 2;

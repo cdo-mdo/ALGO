@@ -1,4 +1,4 @@
-package test.leetcode80;
+package leetcode.leetcode80;
 
 public class Solution {
     public int removeDuplicates(int[] nums) {

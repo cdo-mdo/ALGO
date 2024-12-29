@@ -1,4 +1,4 @@
-package test.leetcode_238;
+package leetcode.leetcode_238;
 
 import java.util.Arrays;
 

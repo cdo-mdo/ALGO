@@ -1,4 +1,4 @@
-package test.leetcode45;
+package leetcode.leetcode45;
 
 public class Solution {
     public int jump(int[] nums) {

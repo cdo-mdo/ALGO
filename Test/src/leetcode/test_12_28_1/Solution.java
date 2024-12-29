@@ -1,4 +1,4 @@
-package test.test_12_28_1;
+package leetcode.test_12_28_1;
 
 public class Solution {
     public int minimumOperations(int[][] grid) {

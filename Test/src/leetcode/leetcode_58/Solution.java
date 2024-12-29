@@ -1,4 +1,4 @@
-package test.leetcode_58;
+package leetcode.leetcode_58;
 
 public class Solution {
     public int lengthOfLastWord(String s) {

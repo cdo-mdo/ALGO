@@ -1,4 +1,4 @@
-package test.contest425.test2;
+package leetcode.contest425.test2;
 
 import java.util.Map;
 import java.util.HashMap;

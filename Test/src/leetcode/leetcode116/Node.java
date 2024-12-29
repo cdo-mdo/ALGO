@@ -1,4 +1,4 @@
-package test.leetcode116;
+package leetcode.leetcode116;
 
 class Node {
     public int val;

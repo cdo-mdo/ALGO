@@ -1,4 +1,4 @@
-package test.subarraysum;
+package leetcode.subarraysum;
 
 public class SubarraySum1 {
 	public int subarraySum(int[] nums, int k) {

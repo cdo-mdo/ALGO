@@ -1,4 +1,4 @@
-package test.singlenumber;
+package leetcode.singlenumber;
 
 public class Solution {
     public int singleNumber(int[] candidates) {

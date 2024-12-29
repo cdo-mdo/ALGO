@@ -1,4 +1,4 @@
-package test.twoadjacent;
+package leetcode.twoadjacent;
 
 import java.util.Arrays;
 import java.util.List;

@@ -1,4 +1,4 @@
-package test.leetcode27;
+package leetcode.leetcode27;
 
 public class Solution {
     public int removeElement(int[] nums, int val) {

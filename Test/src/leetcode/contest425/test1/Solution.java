@@ -1,4 +1,4 @@
-package test.contest425.test1;
+package leetcode.contest425.test1;
 
 import java.util.ArrayList;
 import java.util.List;

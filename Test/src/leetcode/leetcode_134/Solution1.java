@@ -1,4 +1,4 @@
-package test.leetcode_134;
+package leetcode.leetcode_134;
 
 public class Solution1 {
     public int canCompleteCircuit(int[] gas, int[] cost) {

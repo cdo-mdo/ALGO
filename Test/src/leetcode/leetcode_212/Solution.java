@@ -1,4 +1,4 @@
-package test.leetcode_212;
+package leetcode.leetcode_212;
 
 public class Solution {
     public int maxProfit(int[] prices) {
