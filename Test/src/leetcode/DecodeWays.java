@@ -1,4 +1,4 @@
-package test;
+package leetcode;
 
 class DecodeWays {
     public static int numDecodings(String s) {

@@ -1,4 +1,4 @@
-package test;
+package leetcode;
 
 public class Test1 {
 	public void reverseString(char[] s) {

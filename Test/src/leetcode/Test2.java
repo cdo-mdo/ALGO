@@ -1,4 +1,4 @@
-package test;
+package leetcode;
 
 public class Test2 {
 	public int countValidSelections(int[] nums) {
