@@ -1,4 +1,4 @@
-package test.combinationII;
+package leetcode.combinationII;
 
 import java.util.List;
 import java.util.ArrayList;
