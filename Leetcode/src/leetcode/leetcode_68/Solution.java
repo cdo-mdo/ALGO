@@ -10,27 +10,26 @@ public class Solution {
         
         // allocate word to string by max width
         for (String word: words) {
-            if (builder.length() + word.length() <= maxWidth - 1) {
-                if (builder.isEmpty()) {
-                    builder.append(word);
-                }
-                else {
-                    builder.append(" " + word);
-                }
+            if (builder.isEmpty()) {
+                builder.append(word);
             }
             else {
-                strs.add(builder);
-                builder = new StringBuilder();
-                builder.append(word);
+                if (builder.length() + word.length() <= maxWidth - 1) {
+                    builder.append(" " + word);
+                }
+                else {
+                    strs.add(builder);
+                    builder = new StringBuilder();
+                    builder.append(word);
+                }
             }
         }
         strs.add(builder);
         
-        
         for (int i = 0; i < strs.size(); i++) {
             StringBuilder b = strs.get(i);
             if (b.length() == maxWidth) {
-                break;
+                continue;
             }
             
             int spaces = maxWidth - b.length();
@@ -83,5 +82,13 @@ public class Solution {
         String[] str1 = {"What", "must", "be", "acknowledgement", "shall", "be"};
         List<String> strs1 = solution.fullJustify(str1, 16);
         strs1.forEach(s -> System.out.println("[" + s + "]"));
+        
+        String[] str2 = {"Science","is","what","we","understand","well","enough","to","explain","to","a","computer.","Art","is","everything","else","we","do"};
+        List<String> strs2 = solution.fullJustify(str2, 20);
+        strs2.forEach(s -> System.out.println("[" + s + "]"));
+        
+        String[] str3 = {"Listen","to","many,","speak","to","a","few."};
+        List<String> strs3 = solution.fullJustify(str3, 6);
+        strs3.forEach(s -> System.out.println("[" + s + "]"));
     }
 }
