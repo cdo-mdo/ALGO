@@ -1,0 +1,142 @@
+1. Two Pointers (Slow & Fast)
+Used for detecting cycles, finding middle elements, or removing nth node from the end.
+Example problems:
+Linked List Cycle (LeetCode 141)
+Find the Middle of Linked List (LeetCode 876)
+Remove N-th Node from End of List (LeetCode 19)
+Example: Floyd’s Cycle Detection (Detect Cycle)
+
+cpp
+Copy
+Edit
+ListNode* detectCycle(ListNode* head) {
+    ListNode* slow = head, *fast = head;
+    while (fast && fast->next) {
+        slow = slow->next;
+        fast = fast->next->next;
+        if (slow == fast) return slow; // Cycle detected
+    }
+    return nullptr;
+}
+2. Merging Two Sorted Lists
+Frequently used in Merge Sort for linked lists or merging k sorted lists.
+Example problems:
+Merge Two Sorted Lists (LeetCode 21)
+Merge k Sorted Lists (LeetCode 23)
+Example: Merging Two Sorted Lists
+
+cpp
+Copy
+Edit
+ListNode* mergeTwoLists(ListNode* l1, ListNode* l2) {
+    if (!l1) return l2;
+    if (!l2) return l1;
+    if (l1->val < l2->val) {
+        l1->next = mergeTwoLists(l1->next, l2);
+        return l1;
+    } else {
+        l2->next = mergeTwoLists(l1, l2->next);
+        return l2;
+    }
+}
+3. Finding the Middle of a Linked List
+Useful for binary splitting, merging, and reversing half of a list.
+Example problems:
+Find Middle of List (LeetCode 876)
+Palindrome Linked List (LeetCode 234)
+Example: Find Middle of List
+
+cpp
+Copy
+Edit
+ListNode* findMiddle(ListNode* head) {
+    ListNode* slow = head, *fast = head;
+    while (fast && fast->next) {
+        slow = slow->next;
+        fast = fast->next->next;
+    }
+    return slow;
+}
+4. Detecting and Removing a Cycle
+Floyd’s Cycle Detection Algorithm (Slow & Fast pointer).
+If cycle detected, find entry point of the cycle.
+Example problem:
+Linked List Cycle II (LeetCode 142)
+Example: Remove Cycle
+
+cpp
+Copy
+Edit
+ListNode* detectCycle(ListNode* head) {
+    ListNode* slow = head, *fast = head;
+    while (fast && fast->next) {
+        slow = slow->next;
+        fast = fast->next->next;
+        if (slow == fast) { 
+            slow = head;
+            while (slow != fast) {
+                slow = slow->next;
+                fast = fast->next;
+            }
+            return slow; // Start of cycle
+        }
+    }
+    return nullptr;
+}
+5. Reordering a Linked List
+Involves reversing the second half and merging two halves alternatively.
+Example problem:
+Reorder List (LeetCode 143)
+Steps:
+
+Find the middle of the list.
+Reverse the second half.
+Merge first half and reversed second half.
+6. Splitting and Sorting a Linked List
+Used in merge sort on linked lists.
+Example problem:
+Sort List (LeetCode 148)
+Merge Sort on Linked List
+
+cpp
+Copy
+Edit
+ListNode* mergeSort(ListNode* head) {
+    if (!head || !head->next) return head;
+    ListNode* mid = findMiddle(head);
+    ListNode* right = mid->next;
+    mid->next = nullptr;
+    return mergeTwoLists(mergeSort(head), mergeSort(right));
+}
+7. Removing Duplicates (with or without preserving order)
+Remove Duplicates from Sorted List (LeetCode 83)
+Remove Duplicates from Sorted List II (LeetCode 82)
+8. Swapping Nodes Without Changing Values
+Used in problems where swapping nodes instead of values is required.
+Example problem:
+Swapping Nodes in a Linked List (LeetCode 1721)
+Example: Swapping Kth Node from Start and End
+
+cpp
+Copy
+Edit
+ListNode* swapNodes(ListNode* head, int k) {
+    ListNode* fast = head, *slow = head, *first = nullptr;
+    for (int i = 1; i < k; i++) fast = fast->next;
+    first = fast; // Kth node from start
+    while (fast->next) {
+        fast = fast->next;
+        slow = slow->next;
+    }
+    swap(first->val, slow->val); // Kth node from end
+    return head;
+}
+9. Flattening a Linked List
+Used when each node has a child pointer (like a 2D linked list).
+Example problem:
+Flatten a Multilevel Doubly Linked List (LeetCode 430)
+10. XOR Technique (Bitwise) for Special Cases
+Used for space optimization instead of using extra pointers.
+Example:
+XOR Linked List (Interview Problems)
+
